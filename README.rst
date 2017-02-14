@@ -1,11 +1,13 @@
-# Moby
+Moby
+####
 
 Moby is a tool to automate running scripts in a docker container.
 This can be used to run tests or other stuff that depend on binaries or other
 stuff you don't want to install.
 
 
-## Usage
+Usage
+=====
 
 Moby assumes there is a `Dockerfile` in the current directory. Currently there
 is no way to configure otherwise. So there should be a `Dockerfile`.
@@ -13,26 +15,26 @@ is no way to configure otherwise. So there should be a `Dockerfile`.
 Create a file called `moby.yml`, this is the configuration file moby will
 search for. Example:
 
-```yaml
-envlist: [test, build]
+.. code-block:: yaml
 
-test:
-  before:
-    push:
-      - tests
-      - tox.ini
-    run:
-      - apt-get install -y tox
-  run:
-    - tox
+    envlist: [test, build]
 
-build:
-  run:
-    - ./build.sh
-  after:
-    pull:
-      - dist
-```
+    test:
+      before:
+        push:
+          - tests
+          - tox.ini
+        run:
+          - apt-get install -y tox
+      run:
+        - tox
+
+    build:
+      run:
+        - ./build.sh
+      after:
+        pull:
+          - dist
 
 Then run `moby`.
 
@@ -45,33 +47,40 @@ directory is downloaded from the container to the current directory.
 After all this, the container is shut down.
 
 
-## Configuration reference
+Configuration reference
+=======================
 
-### after
+after
+-----
 
 An environment can have an `after` entry. This entry is considered an
 environment that is ran after the environment is ran.
 
-### before
+before
+------
 
 An environment can have an `after` entry. This entry is considered an
 environment that is ran before the environment is ran.
 
-### envlist
+envlist
+-------
 
 `envlist` is a required entry, it states which environments are to be run.
 
-### environment
+environment
+-----------
 
 An environment is created at the root with an arbitrary name.
 An environment only requires a `run` entry.
 
-### push
+push
+----
 
 An environment can have a `push` entry. This states which files to push to
 the container.
 
-### pull
+pull
+----
 
 An environment can have a `pull` entry. This states which files to pull from
 the container.
