@@ -17,5 +17,5 @@ setup(
     ],
     name='moby',
     url='https://github.com/siebz0r/moby',
-    version='0.0.1',
+    version='0.0.2',
     zip_safe=True)
