@@ -19,5 +19,5 @@ setup(
     name='moby',
     py_modules=['moby'],
     url='https://github.com/siebz0r/moby',
-    version='0.0.2',
+    version='0.0.3',
     zip_safe=True)
