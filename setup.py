@@ -15,6 +15,7 @@ setup(
         'docker',
         'pyyaml'
     ],
+    keywords=['docker', 'moby'],
     name='moby',
     py_modules=['moby'],
     url='https://github.com/siebz0r/moby',
