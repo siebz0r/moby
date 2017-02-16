@@ -25,7 +25,6 @@ import tarfile
 
 import docker
 import yaml
-import requests
 
 
 END = '\033[0m'
