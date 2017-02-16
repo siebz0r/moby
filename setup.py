@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding utf-8
 
+"""Setup file for moby."""
+
 from setuptools import setup
 
 
