@@ -1,0 +1,9 @@
+flake8 ~= 2.6.2
+flake8-blind-except ~= 0.1.1
+flake8-comprehensions ~= 1.1.1
+flake8-docstrings ~= 0.2.8
+flake8-import-order ~= 0.8.0
+flake8-pep3101 ~= 0.2
+flake8-print ~= 2.0.2
+flake8-quotes ~= 0.3.0
+pep8-naming ~= 0.4.1
