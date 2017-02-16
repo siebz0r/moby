@@ -1,6 +1,10 @@
 Moby
 ####
 
+.. image:: https://img.shields.io/pypi/v/moby.svg
+   :target: https://pypi.python.org/pypi/moby
+   :alt: Latest version
+
 Moby is a tool to automate running scripts in a docker container.
 This can be used to run tests or other stuff that depend on binaries or other
 stuff you don't want to install.
